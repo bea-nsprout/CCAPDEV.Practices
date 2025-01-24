@@ -1,0 +1,51 @@
+#box1 {
+    background-color: #006ebf;
+}
+#box2 {
+    grid-row-start: 3;
+    background-color: #315299;
+
+}
+.box {
+    text-align: center;
+    align-content: center;
+    color: white;
+    font-family: Inter var, sans-serif;
+    font-size: 100px;
+}
+
+
+#main-text {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    text-align: right;
+    font-family: Inter var, sans-serif;
+    font-size: 45px;
+    color: #315299;
+    align-content: center;
+    padding: 50px;
+}
+
+.sub-text {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    text-align: right;
+    font-family: Inter var, sans-serif;
+    font-size: 45px;
+    align-content: end;
+    padding-right: 50px;
+}
+
+#pub-container {
+    display: grid;
+    grid-template-columns: 1fr 3fr; /*fr means fractional unit*/
+    grid-template-rows: 2fr 1fr 2fr;
+    background-color: white;
+    border: 1px solid black;
+    height: 750px;
+    width: 750px;
+}
