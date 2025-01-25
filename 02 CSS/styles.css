@@ -49,3 +49,19 @@
     height: 750px;
     width: 750px;
 }
+.button {
+    border: 2px solid #315299;
+    background-color: #315299;
+    color: white;
+    padding: 10px 40px;
+    font-family: Inter var, sans-serif;
+    font-size: 45px;
+
+    /*<span style="color: white; background-color: #315299;
+    padding-left: 40px; padding-right: 40px; padding-top: 10px; padding-bottom: 10px"><b>Recruitment</b></span>*/
+}
+.button:hover {
+    background-color: white;
+    color: #315299;
+    transition-duration: 0.2s;
+}
