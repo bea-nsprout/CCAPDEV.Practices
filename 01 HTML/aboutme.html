@@ -3,20 +3,157 @@
 <head>
     <meta charset="UTF-8">
     <title>Resume</title>
+
+    <style>
+        .mini-section {
+            display: flex;              /*turns into flexbox container*/
+            flex-wrap: wrap;            /*wraps text into next line*/
+        }
+    </style>
+
 </head>
 <body>
-    <h1>Bea Antoinette Uy</h1>
-    0956-950-3023 |
-    <a href="mailto:bea_uy@dlsu.edu.ph">bea_uy@dlsu.edu.ph</a> |
-    <a href="https://www.linkedin.com/in/bea-uy-555a132b1/">linkedin.com/in/bea-uy-555a132b1/</a> |
-    <a href="https://github.com/bea-nsprout">github.com/bea-nsprout</a>
 
-    <div>
-        <span><tab>De La Salle University</span>
-        <b>De La Salle University</b>
+<div style="width: 840px; float:left;">
+    <div id="back" style="width: 150px; float: right;">
+        <a href="index.html">>> Back to Home page</a>
     </div>
 
+    <div id="heading">
+        <h1>Bea Antoinette Uy</h1>
+        0956-xxx-xxx3 |
+        <a href="mailto:bea_uy@dlsu.edu.ph">bea_uy@dlsu.edu.ph</a> |
+        <a href="https://www.linkedin.com/in/bea-uy-555a132b1/">linkedin.com/in/bea-uy-555a132b1/</a> |
+        <a href="https://github.com/bea-nsprout">github.com/bea-nsprout</a><br><br>
+    </div>
+
+    <div id="education">
+        <span style="font-size: 120%">EDUCATION</span><br>
+        <hr>        <!--line separator-->
+
+        <!--DE LA SALLE UNIVERSITY FACTS-->
+        <div class="mini-section">
+            <div style="float: left; width: 50%; text-align: left;">
+                <b>De La Salle University</b><br>
+                <i>Bachelor of Science in Computer Science Software Technology</i><br>
+            </div>
+
+            <div style="float: right; width: 50%; text-align: right;">
+                Manila, Taft<br>
+                <i>Expected Graduation, Sep 2027</i><br>
+            </div>
+        </div>
+        <br>
+
+        <!--PREVIOUS SCHOOL FACTS-->
+        <div class="mini-section">
+            <div style="float: left; width: 50%; text-align: left;">
+                <b>St. Stephen's High School</b><br>
+                <i>Science, Technology, Engineering and Mathematics (STEM)</i><br>
+                <i>Secondary Education</i><br>
+            </div>
+
+            <div style="float: right; width: 50%; text-align: right;">
+                Manila, Sta. Cruz<br>
+                <i>July 2021 - May 2023</i><br>
+                <i>July 2017 - May 2021</i><br>
+            </div>
+        </div>
+        <br>
+    </div>
+    <br>
+
+    <div id="experience">
+        <span style="font-size: 120%">EXPERIENCE</span><br>
+        <hr>
+
+        <div id="PTS" class="mini-section">
+            <div style="float: left; width: 50%; text-align: left;">
+                <b>Associate Vice President for Academics</b><br>
+                <i>Peer Tutors Society</i><br>
+            </div>
+
+            <div style="float: right; width: 50%; text-align: right;">
+                January 2024 - Present<br>
+                <i>De La Salle University Manila</i><br>
+            </div>
+        </div>
+        <br>
+
+        <div id="LSCS" class="mini-section">
+            <div style="float: left; width: 50%; text-align: left;">
+                <b>Junior Officer</b><br>
+                <i>La Salle Computer Society</i><br>
+            </div>
+
+            <div style="float: right; width: 50%; text-align: right;">
+                October 2024 - Present<br>
+                <i>De La Salle University Manila</i><br>
+            </div>
+        </div>
+        <br>
+
+        <div class="mini-section">
+            <div style="float: left; width: 50%; text-align: left;">
+                <b>Documentations and Finance Trainee</b><br>
+                <i>Englicom</i><br>
+            </div>
 
 
+            <div style="float: right; width: 50%; text-align: right;">
+                January 2024 - August 2024<br>
+                <i>De La Salle University Manila</i><br>
+            </div>
+        </div>
+        <br>
+    </div>
+    <br>
+
+
+    <div id="projects">
+        <span style="font-size: 120%">PROJECTS</span><br>
+        <hr>
+
+        <div id="Hotel Reservation Management System" class="mini-section">
+            <b>Hotel Reservation Management System</b>&nbsp; | &nbsp;<i>Java, Java Swing</i><br>
+            <ul>
+                <li>Developed a reservation management system using Java and Java Swing</li>
+                <li>Incorporated features such as booking management, room availability checks, income summary report
+                    while adhering to the Model-View-Controller (MVC) design standards for maintainability</li>
+            </ul>
+        </div>
+
+        <div id="Warehouse Logistics System" class="mini-section">
+            <b>Warehouse Logistics System</b>&nbsp; | &nbsp;<i>MySQL, HTML/CSS, and nodeJS</i><br>
+            <ul>
+                <li>Developed a warehouse logistics system database application</li>
+                <li>Designed the database schema</li>
+                <li>Implemented features such as production and adjustment of items, and the movement of items between warehouses</li>
+                <li>Implemented summary reports and filter functions for better user experience</li>
+            </ul>
+        </div>
+
+        <div id="Point of Sale Application" class="mini-section">
+            <b>Point of Sale</b>&nbsp; | &nbsp;<i>Microsoft VBA</i><br>
+            <ul>
+                <li>Regularly maintains and updates a Point of Sale application, such as: implementing new features per user request, and bug fixes</li>
+                <li>Implemented new summary reports to track the shipping of items</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="TECHNICAL SKILLS">
+        <span style="font-size: 120%">TECHNICAL SKILLS</span><br>
+        <hr>
+
+        <b>Languages:</b>&nbsp; Java, Python, C, Go, SQL, HTML/CSS<br>
+        <b>Technologies:</b>&nbsp; Visual Studio Code, IntelliJ, Webstorm, Github, MySQL<br>
+    </div>
+    <br>
+
+
+
+
+</div>
 </body>
 </html>
