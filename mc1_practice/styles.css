@@ -1,0 +1,79 @@
+body {
+    background-color: lightgray;
+    margin: 0px;
+}
+
+.header-area {
+    background-color: chocolate;
+    /* height: 22vw; */
+    align-content: center;
+}
+
+.header-box {
+    background-color: burlywood;
+    margin: 3vw auto;
+    height: max(12vw, auto);
+    border: 2vw solid;
+    border-image: 60 round url(https://publicdomainvectors.org/photos/Border-21--Arvin61r58.png); 
+    width: 70vw;
+
+
+    display: flex;
+    align-items: stretch;
+    gap: 3vw;
+    padding: 2vw;
+}
+
+img {
+    height: 10vw;
+}
+h1 {
+    margin: 0;
+    padding: 0;
+
+}
+
+.main-content{
+    margin: 0 auto;
+    width: 78vw;
+    display: grid;
+    grid-template-columns: 1fr 2.5fr 2.5fr;
+}
+
+.main-content div {
+    margin: 0 0 2vw 0 ;
+    border-radius: 1vw;
+    height: auto;
+    padding: 1vw;
+}
+
+.main-content .attribute {
+    text-align: center;
+    background-color: white;
+    border: solid 1px black;
+    padding: 1vw 1vw 2vw 1vw ;
+}
+.main-content .progress-tube {
+    padding: 0;
+    margin: 0;
+    height: 1vw;
+    border-radius: 15px;
+    background-color: lightgray;
+}
+.main-content .progress-tube .progress-bar {
+    padding: 0;
+    margin: 0;
+    height: inherit;
+    border-radius: inherit;
+    background-color: green;
+}
+
+.rskill1 {
+    background-color: chocolate;
+}
+.rskill2 {
+    background-color: goldenrod;
+}
+.rskill3 {
+    background-color: indianred;
+}
