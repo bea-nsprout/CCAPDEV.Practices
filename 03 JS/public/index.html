@@ -3,13 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Countdown!</title>
+
+    <style>
+        pre {
+            font-family: monospace;
+        }
+    </style>
 </head>
 <body>
     Countdown!
-    <button onClick="{() => play()}">press play</button>
+    <button onClick="play()">press play</button>
 
-    <p id='countdown-display'></p>
+    <pre id='countdown-display'></pre>
 
     <script> 
         //Array of frame file names
