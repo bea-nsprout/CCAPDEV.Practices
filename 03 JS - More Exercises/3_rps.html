@@ -1,0 +1,61 @@
+<html>
+	<head>
+	</head>
+
+	<body>
+		<h1 id="YourMove">Your move: NONE</h1>
+		<h1 id="OpponentMove">Opponent's move: NONE</h1>
+		<p>
+		<button type="button" onclick="rps(0)">Rock</button>
+		<button type="button" onclick="rps(1)">Paper</button>
+		<button type="button" onclick="rps(2)">Scissors</button>
+		<p>
+
+		<h2 id="Verdict">Verdict = NONE</h2>
+	<script>
+		function getOpponentMove() {
+			return Math.floor(Math.random() * 10) % 3;
+		}
+		function rps(pMove) {
+
+			const oMove = getOpponentMove();
+			var verdict = "";
+			updateMove(1, pMove);
+			updateMove(0, oMove);
+
+			if (pMove === oMove) {
+				verdict = "NONE";
+			} else if (pMove === 1 && oMove === 0 || pMove === 0 && oMove === 2 || pMove === 2 && oMove === 1) {
+				verdict = "WON";
+			} else {
+				verdict = "LOST";
+			}
+
+			document.getElementById("Verdict").innerHTML = `Verdict = ${verdict}`;
+		}
+		function updateMove(player_code, move_code) {
+			//player 0 opponent, player1 me
+			//move code 0 rock, 1 paper, 2 scissors
+
+			const player = (player_code === 1) ? "YourMove" : "OpponentMove";
+			var move_string = (player_code === 1) ? "Your move: " : "Opponent's move: ";
+
+			switch (move_code) {
+				case 0:
+					move_string += 'ROCK';
+					break;
+				case 1:
+					move_string += 'PAPER';
+					break;
+				case 2:
+					move_string += 'SCISSORS';
+					break;
+			}
+
+			document.getElementById(player).innerHTML = move_string;
+		}
+
+
+	</script>
+	</body>
+</html>
