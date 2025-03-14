@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown!</title>
+
+    <style>
+        pre {
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    Countdown!
+    <button onClick="play()">press play</button>
+
+    <pre id='countdown-display'></pre>
+
+    <script> 
+        //Array of frame file names
+        const frameFiles = [
+            "/frames/frame0001.txt",
+            "/frames/frame0002.txt",
+            "/frames/frame0003.txt",
+            "/frames/frame0004.txt",
+            "/frames/frame0005.txt",
+        ]
+
+        let currentFrame = 0;
+        let interval;
+        let frames = [];
+
+        async function loadFrames() {
+            for (const file of frameFiles) {
+                const response = await fetch(file);
+                const content = await response.text();
+                frames.push(content);
+            }
+        }
+
+        function play() {
+            clearInterval(interval);
+            currentFrame = frames.length-1;
+            interval = setInterval(updateCountdown, 1000);
+
+        }
+
+        function updateCountdown() {
+            const display = document.getElementById('countdown-display');
+            if (currentFrame >= 0) {
+                display.textContent = frames[currentFrame];
+                currentFrame--;
+            }
+            else {
+                clearInterval(interval);
+                display.textContent ="Go";
+            }
+        }
+
+
+        window.onload = async () => {
+            await loadFrames();
+            console.log(`Frames loaded successfully! Total frames: ${frames.length}`);
+        };
+
+
+
+    </script>
+</body>
+</html>

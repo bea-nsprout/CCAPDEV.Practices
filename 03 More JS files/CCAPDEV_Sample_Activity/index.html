@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Add a post</title>
+
+
+    <style>
+        * {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        main {
+            margin: 200px auto;
+            width: 600px;
+            padding: 30px;
+            border: solid #ccc 1px;
+            border-radius: 4px;
+            box-shadow: 2px 0 10px lightslategray;
+        
+        }
+        h1, h2 {
+            color: #025000;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        textarea {
+            resize: vertical;
+        }
+        input[type=submit] {
+            background-color: #025000;
+            color: white;
+            cursor: pointer;
+            font-size: 1rem;
+
+        }
+        input[type=submit]:hover {
+            background-color: #ccc;
+            color: black;
+        }
+
+
+    </style>
+</head>
+<body>
+    <main>
+        <form action="/submit-post" method="post" 
+        enctype="multipart/form-data">
+            <h1> Add a post!</h1>
+            Title: <br> <input name="title" type="text" /> <br />
+            Description: <br> <input name="description" type="text" /> <br />
+            Content: <br> <textarea name="content" rows="10" cols="30">
+            </textarea> <br />
+            <input type="file" name="image"/> <br /> 
+            <input type="submit" />
+        </form>
+        <br>
+        <a href="/content">View posts made!</a>
+    </main>
+
+    
+    
+</body>
+</html>

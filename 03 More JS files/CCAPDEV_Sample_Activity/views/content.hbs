@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>Sample DB Page</title>
+        <style>
+            * {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+            h1 {
+                margin: 20px;
+                color: #025000;
+            }
+            main {
+                margin: 0 auto;
+                display: flex;
+            }
+            .post-container {
+                margin: 20px;
+                width: 600px;
+                padding: 30px;
+                border: solid #ccc 1px;
+                border-radius: 4px;
+                box-shadow: 2px 0 10px lightslategray;
+            }
+        </style>
+    </head>
+
+    <body>
+    <h1>All Posts</h1>
+    <main>
+
+        {{#each posts}}
+            <div class="post-container">
+                <img src='{{this.image}}' height="auto" width="100%"/>
+<!--                ID: {{this.id}} <br>-->
+                <h4>{{this.title}} </h4>
+                {{this.description}} <br>
+                <p>{{this.content}}</p>
+
+                <br>
+            </div>
+        {{/each}}
+    </main>
+
+
+
+    </body>
+</html>

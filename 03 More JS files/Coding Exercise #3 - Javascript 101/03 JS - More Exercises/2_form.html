@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+	function checkForm()
+	{
+		var valid = false;
+
+		// TODO: Your code here
+        /*
+        the following are my  mistakes:
+        getelementbyid -> getElementById
+        styles.backgroundcolor -> style.backgroundColor (the styleS and Color)
+         */
+		const firstname = document.getElementById('firstname').value;
+        const lastname = document.getElementById('lastname').value;
+        const email = document.getElementById('email').value;
+        const password1 = document.getElementById('password1').value;
+        const password2 = document.getElementById('password2').value;
+
+        if (firstname.length > 0 && lastname.length > 0 && email.length > 0
+        && password1.length > 0 && password2.length > 0) {
+            valid = true;
+            alert('Welcome ' + firstname + " " + lastname);
+
+        }
+        else {
+            highlightError(firstname, lastname, email, password1, password2);
+            alert('Please enter all required fields');
+        }
+
+        /**
+         * alternative:
+         * if(valid){
+         *                 alert(`Hello ${fName} ${lName}`);
+         *             }
+         */
+
+        return valid;
+	}
+
+    function highlightError(firstname, lastname, email, password1, password2) {
+        document.getElementById('firstname').style.backgroundColor = "white";
+        document.getElementById('lastname').style.backgroundColor = "white";
+        document.getElementById('email').style.backgroundColor = "white";
+        document.getElementById('password1').style.backgroundColor = "white";
+        document.getElementById('password2').style.backgroundColor = "white";
+
+
+        if (firstname.length === 0) {
+            document.getElementById('firstname').style.backgroundColor = "red";
+        }
+        if (lastname.length === 0) {
+            document.getElementById('lastname').style.backgroundColor = "red";
+        }
+        if (email.length === 0) {
+            document.getElementById('email').style.backgroundColor = "red";
+        }
+        if (password1.length === 0) {
+            document.getElementById('password1').style.backgroundColor = "red";
+        }
+        if (password2.length === 0) {
+            document.getElementById('password2').style.backgroundColor = "red";
+        }
+        if (password1 !== password2) {
+            document.getElementById('password1').style.backgroundColor = "red";
+            document.getElementById('password2').style.backgroundColor = "red";
+        }
+
+    }
+	</script>
+    </head>
+
+    <body>
+        <form action = "http://www.google.com" onSubmit = "return checkForm()">
+        <table border = 1 align = "center">
+            <tr>
+                <td>First Name:</td>
+                <td><input type = text id = firstname size = 25></td>
+            </tr>
+	    <tr>
+                <td>Last Name:</td>
+                <td><input type = text id = lastname size = 25></td>
+            </tr>
+	    <tr>
+                <td>E-mail:</td>
+                <td><input type = text id = email size = 25></td>
+            </tr>
+            <tr>
+                <td>Password:</td>
+                <td><input type = password id = password1 size = 25></td>
+            </tr>
+            <tr>
+                <td>Confirm Password:</td>
+                <td><input type = password id = password2 size = 25></td>
+            </tr>
+            <tr>
+                <td colspan = 2 align = "right">
+                <input type = submit value = "Submit"></td>
+            </tr>
+        </table>
+        </form>
+    </body>
+</html>    
+      

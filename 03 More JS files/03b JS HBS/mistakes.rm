@@ -1,0 +1,24 @@
+### hbs filename
+- should be the same as res.render('template', posts);
+
+### missing route
+##### old
+app.get('/', (req, res) => {
+    res.render('template', { posts: posts }); // Render template.hbs with posts data
+});
+##### new
+app.get('/template', (req, res) => {
+    res.render('template', { posts: posts }); // Render template.hbs with posts data
+});
+
+### pass the posts array as an object
+*old* res.render('template', posts);
+*new* res.render('template', {posts: posts});
+
+
+### don't forget to serve the index.html at root
+app.get('/', function (req, res) {
+    res.sendFile(__dirname + '\\' + 'index.html');
+});
+
+### images should be put in public
