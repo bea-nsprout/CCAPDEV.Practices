@@ -1,0 +1,27 @@
+1. partials directory for partial .hbs
+   - {{#if accounts.length}}
+                 {{#each accounts}}
+                     {{> debtItem}}     `calls debtItem.hbs`
+                 {{/each}}
+             {{else}}
+
+
+2. mongoose delete database
+    mongosh "yourconnectionstring"
+    use your_database_name
+    db.accounts.deleteMany({})      //delete all documents in accounts collection
+
+3. create new records like
+    result = await Account.create ( {json data})
+
+4. update records like
+    await accountExists.save();     //accountExists: result of findOne
+
+5. backend means nothing if you dont connect it to a button action
+
+6. fetch vs app.post()
+    fetch() lets your frontend communicate with your backend
+
+    app.post()/router.post() lets your backend receive and process those communications
+
+    They're two sides of the same coin - one sends requests, the other handles them.
